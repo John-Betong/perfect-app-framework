@@ -1,0 +1,10 @@
+# User-agent: *
+# 2018-05-30 - REMOVED Disallow Added Allow
+# Disallow:
+# Allow: /
+
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /

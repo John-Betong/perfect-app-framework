@@ -1,0 +1,114 @@
+/*
+https://tsh.io/blog/why-should-you-use-hsl-color-representation-in-css/
+
+hsla(hue, saturation, lightness, alpha)
+
+https://www.w3schools.com/html/html_colors_hsl.asp
+
+hsla(hue, saturation, lightness, alpha)
+  hue
+     a degree on the color circle (from 0 to 360) - 
+     0   is red, // (or 360) 
+     120 is green, 
+     240 is blue
+  saturation
+    0% is a shade of gray and 100% is the full color (full saturation)
+  lightness
+    0%   is black 
+    50%  is normal 
+    100% is white
+  alpha
+    opacity as a number between 0.0 (fully transparent) and 1.0 (fully opaque)
+    # The alpha parameter is a number between 0.0 (fully transparent) 
+    # and 1.0 (not transparent at all):
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+html,
+body {
+  font: 16px/1.55 
+  BlinkMacSystemFont, "Segoe UI", Roboto, 
+  Helvetica, Arial, sans-serif;
+ width: 100%; max-width: 130rem;
+ margin: 0 auto ;
+ background-color: var(--bdb); 
+ color: var(--bdf);
+ /*
+  --bg: pink;
+  background-color: var(--bg); 
+  color: SKYBLUE;
+  color: color-contrast(var(--bg) vs red, white, blue, pink, orange, white, black);
+ */
+}
+
+main {
+  width: 88%; margin: 2rem auto; 
+  border: solid 1px var(--bdf);
+}
+
+header {
+  /*
+  jb_in_shorts.gif
+  jb_in_shorts.png
+  jb_in_shorts.jpeg
+  jb_in_shorts.webp
+  image.webp 
+  */  
+  background-image: url(https://zzz.anetizer.com/assets/imgs/jb_in_shorts.gif);  
+  background-repeat: no-repeat;
+  background-size: 2.6rem;
+  text-align: center;
+  background-color: var(--ttb);
+  color: var(--ttf);
+  margin: 0 auto 2rem;
+}
+header h1 {
+  margin: 0; padding: 0;
+  height: 1.21em;
+}
+header nav {
+  text-align: center;
+  line-height: 1;
+  margin: 0 0 0.42rem;
+  font-size: large;
+}
+header nav #colours {
+  font-size:  x-small;
+}
+header nav ul li {
+  display: inline-block;
+  margin: 0 0.42em 0.33rem;
+}
+header nav ul li:hover {
+  background-color: var(--dvb); color: var(--dvf); 
+}
+header nav ul li a {
+  text-decoration: none;
+  color: var(--ttf);
+}
+
+footer {
+  position: fixed;
+  bottom: 0; left: 0;
+  width: 100%; height: 1.42em;
+  text-align: center;
+  background-color: var(--ttb);
+  color: var(--ttf);
+}
+
+#FOOTER-SIDE {
+  position: fixed; 
+  top: 11em; right: 0;
+  font-size: smaller;
+  text-align: center;
+  writing-mode: vertical-rl;
+  background-color: var(ZZZ, SNOW); 
+  font-weight: 700;
+  padding: 1em 0;
+}
+#FOOTER-SIDE a {
+  color: var(--bdf);
+}

@@ -1,0 +1,25 @@
+/* FIRST OPEN, ALL TOGGLED SEPARATELY */
+details {
+  margin: 0 0 1rem;
+}
+details div {
+ margin: 0.88rem 2.1rem 2.1rem;
+ background-color: var(--dvb);
+ color: var(--dvf);
+}
+summary {
+ display: inline-block;
+ padding: 0.12rem 0.42rem;
+ border-radius: 0.42rem;
+ cursor: pointer;
+ font-weight: 600; font-size: small;
+ background-color: var(--ttb);
+ color: var(--ttF);
+}
+
+main details div h2 {
+  border-bottom: solid 1px var(--dvf);
+} 
+.center {
+  text-align: center;
+}

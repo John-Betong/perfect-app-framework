@@ -1,0 +1,30 @@
+/* FIRST OPEN, ALL TOGGLED SEPARATELY */
+section {
+    border: solid 1px var(--fg-002);
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(8rem, 25%) 1fr;
+}
+main .sidebar {
+  font-size: 1rem;
+  margin:  0.42rem ; border-right: solid 1px #ccc;
+}
+main .content {
+  padding: 1rem;
+}
+summary {
+  font-size: small;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: var(--bg-001);
+  color: var(--fg-001);
+}
+details {
+  margin: 0 0 1rem;
+}
+details div {
+  margin-bottom: 2.2rem;
+  margin: 0 1rem;
+}

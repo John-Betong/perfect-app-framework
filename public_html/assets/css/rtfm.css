@@ -1,0 +1,128 @@
+/* Hiding the checkboxes or radio button*/ 
+/*
+main
+div
+input label
+*/
+h4 button {
+ font-size: X-small;
+} 
+.grid {
+  display: grid;
+  grid-template-columns: 8em auto ;
+  width: 88%; 
+  margin: 0 auto;
+}
+#lft {
+  background-color: var(--dvb);
+  color: var(--dvf);
+}
+#location {
+  background-color: SNOW;
+  margin-left: solid 1px var(--ttb);
+  padding-left: 0.88em;
+}
+
+input {
+ position: absolute;
+ opacity: 0;
+ z-index: -1;
+}
+/* Accordion styles */ 
+.faq {
+ color: var(--bdf);
+ margin-bottom: 1rem;
+ width: 8rem;
+}
+ 
+.faq-content {
+  max-height: 0;
+  padding: 0 1em;
+  transition: all 0.35s;
+  display: none;
+ }
+
+/* CHECKBOXES */ 
+input:checked + .faq-label {
+ background-color: var(--XXXdvB);
+ color: var(--XXXdvF);
+}
+input:checked ~ .faq-content {
+ max-height: 100vh;
+ padding: 0.21em;
+ font-weight: normal;
+ display: block;
+ transition: all 0.35s;
+ background-color: var(--dvf);
+ color: var(--dvb);
+}
+
+/* RADIO Closing all */ 
+.faq-label {
+ position: relative;
+ font-weight: 700;
+}
+.faq-close {
+ display: inline-block;
+ padding: 1rem;
+ font-size: 1rem;
+ background-color: var(--dvb);
+ color: var(--dvf);
+ cursor: pointer;
+ /*
+ position: absolute;
+ left: 64rem;
+ */
+}
+
+/* ======== NOTHING USED BELOW ============ */
+
+main .XXXfaq-label {
+/*  
+ font-size: 1.2rem;
+ background-color: var(--bdB);
+ color: var(--bdF);
+ display: flex;
+*/ 
+ align-items: center;
+ justify-content: space-between;
+ padding: 0.1em;
+ cursor: pointer;
+ user-select: none;
+}
+main .XXXfaq-label::after {
+/*  
+  content: '\002B';
+*/  
+  padding: 0.51rem;
+  transform: scale(1.8);
+  text-align: center;
+  transition: all 0.35s;
+  font-size: smaller;
+}
+
+main .XXXsidebar {
+  float: left;
+  width: 10%; max-width: 8rem; min-width: 8rem; height: 70%;
+  overflow: auto;
+  background-color: aqua;
+}
+main #XXXlocation {
+  float:left; 
+  padding: 2em; 
+  margin: 0 auto 2em;
+  background-color: var(--dvb); 
+  color: var(--dvf);
+  /*
+  overflow-wrap: normal;
+  overflow-wrap: break-word;
+  */
+  width: 75%;
+  overflow: auto;
+}
+main XXXinput:checked + .faq-label::after {
+/*  
+  content: '\2013';
+ transform: scale(1.5);
+*/  
+}

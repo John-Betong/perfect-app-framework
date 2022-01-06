@@ -13,6 +13,11 @@ $aLinks = <<< ____EOT
          </button>
       </h4>
       \n
+      <h4 class="faq-content">
+         <button onclick="test('tree.php')">
+            File Tree View 
+         </button>
+      </h4>
     </section>
 
     <section class="faq">
@@ -36,31 +41,31 @@ $aLinks = <<< ____EOT
 
       \n
       <h4 class="faq-content">
-         <button onclick=test('introducing.php');>
+         <button onclick="test('introducing.php')">
             Introducing
          </button>
        </h4>
       \n
       <h4 class="faq-content">
-         <button onclick=test('programming.php');>
+         <button onclick="test('programming.php')">
             Programming
          </button>
        </h4>
       \n
       <h4 class="faq-content">
-         <button onclick=test('requirements.php');>
+         <button onclick="test('requirements.php')">
             Requirements
          </button>
        </h4>
       \n
       <h4 class="faq-content">
-         <button onclick=test(008);>
+         <button onclick="test('spare-001.php')">
             Stuff: 004
          </button>
        </h4>
       \n
       <h4 class="faq-content">
-         <button onclick=test('spare-001.php');>
+         <button onclick="test('spare-002.php')">
             Stuff: 001
          </button>
        </h4>
@@ -86,7 +91,8 @@ $tmp = '';
 foreach($links as $key => $item) :
    # echo '<br>'. $cnt++ . ' : ' .$key . ' ==> ' .$item;
    # echo side_single($cnt++, $key, $item);
-   $tmp .= side_single($cnt++, $key, $item);
+  # $tmp .= side_single($cnt++, $key, $item);
+   $tmp .= side_single($cnt++, 'spare-001.php', $item);
 endforeach;
 # die;
 
@@ -104,7 +110,7 @@ function side_single($cnt, $url, $page) : string
         $page
       </label>
       <h4 class="faq-content">
-         <button onclick=test($url);>
+         <button onclick="test('spare-001.php')">
             $url
          </button>
        </h4>

@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 $title  = 'Perfect App Framework';
-$css    = 'style.css';
+$css    = 'home.css';
 
 require VIEWS .'/incs/doctype.php';
 
@@ -28,11 +28,13 @@ $aDocs = [
     foreach($aDocs as $key => $doc) :
       require 'assets/docs/' .$doc .'.php';
      endforeach;
-   ?>   
+   ?>    
 
   <details>
-      <summary> Source code:  </summary>
-      <div class="description">
+      <summary> 
+        Source code:  
+      </summary>
+      <div>
         <h2> &nbsp; </h2>
         <dl>
           <dt> XXX </dt>

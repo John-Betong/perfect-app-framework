@@ -9,13 +9,13 @@ require VIEWS .'/incs/doctype.php';
 <?php require VIEWS .'/incs/header.php'; ?>
 
 <main class="grid">
-  <section id="lft"> 
-    <?php require VIEWS .'/incs/side-single.php'; ?>
-  </section>
+  <div id="lft"> 
+    <?php require VIEWS .'/incs/side-rtfm.php'; ?>
+  </div>
 
-  <section id="location"> 
+  <div id="location"> 
     <?php require 'assets/docs/blurb.php'; ?>
-  </section>
+  </div>
 </main>
  
 <?php require VIEWS .'/incs/footer-side.php'; ?> 

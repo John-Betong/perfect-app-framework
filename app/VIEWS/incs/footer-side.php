@@ -25,6 +25,9 @@ ____EOT;
 
 # ====== GetLinks ==> v001, v002, v003, v004 ==================
   $tLink  = 'https://validator.w3.org/nu/?doc=' .$vEnc ;  
+  $v000   = '<a href="#"> SECURITY </a>';
+
+  $tLink  = 'https://validator.w3.org/nu/?doc=' .$vEnc ;  
   $v001   = getLink($tLink, 'HTML');
 
   $tLink  = 'https://jigsaw.w3.org/css-validator/validator?uri='
@@ -40,6 +43,7 @@ ____EOT;
   $tLink = 'https://sharethemeal.org/donate?campaign=syria7&fbclid=IwAR1xGVjPM2wFtjj-EaBVa0BLg-2E7a8IrWTwBJBy_DYmRzF6deD4KXJI-Fw_aem_AeF1ocPc5Y-i-cnLDGoE5mkRIqDdqs_gCluWN8iOHdTk5IoKJLv71FVFq_ec8mFm3Ec4djR1J_zJ8hG0ccAbv2KryRqXhHkQtxNjTQ1ThLd8uYppoCpu4PpgwtJCYmdV3V0';
   $v004 = getLink($tLink, 'FTH'); // 'Feed the hungry';
 
+/*
 # OLD VERSION
   $STYLE = '
     position: fixed; 
@@ -51,6 +55,7 @@ ____EOT;
     font-weight: 700;
     padding: 1em 0;
     ';
+*/
 
 # NEW VERSION
 # header.php    
@@ -62,6 +67,8 @@ ____EOT;
         $v001
         &nbsp;&nbsp;
         $v002 
+        &nbsp;&nbsp;
+        $v000
         &nbsp;&nbsp;
         $v003
         &nbsp;&nbsp;

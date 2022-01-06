@@ -29,7 +29,7 @@ $aLinks = <<< ____EOT
       \n
 
       <h4 class="faq-content">
-         <button onclick=:"test('example.php')">
+         <button onclick="test('example.php')">
             Example-004
          </button>
       </h4>
@@ -41,31 +41,31 @@ $aLinks = <<< ____EOT
        </h4>
       \n
       <h4 class="faq-content">
-         <button onclick=test('example.php');>
+         <button onclick="test('example.php')">
             Example-006
          </button>
        </h4>
       \n
       <h4 class="faq-content">
-         <button onclick=test('example.php');>
+         <button onclick="test('example.php')">
             Example-007
          </button>
        </h4>
       \n
       <h4 class="faq-content">
-         <button onclick=test('example.php');>
+         <button onclick="test('example.php')">
             Example-008
          </button>
        </h4>
       \n
       <h4 class="faq-content">
-         <button onclick=test('example.php');>
+         <button onclick="test('example.php')">
             Example-009
          </button>
        </h4>
       \n
       <h4 class="faq-content">
-         <button onclick=test('example.php');>
+         <button onclick="test('example.php')">
             Example-010
          </button>
        </h4>
@@ -109,7 +109,7 @@ function side_single($cnt, $url, $page) : string
         $page
       </label>
       <h4 class="faq-content">
-         <button onclick=test($url);>
+         <button onclick="test($url)">
             $url
          </button>
        </h4>

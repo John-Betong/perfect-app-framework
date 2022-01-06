@@ -1,5 +1,6 @@
 <?php declare(strict_types=1);
-
+echo getcwd();
+echo '<hr>';
 ?>
   <details open>
     <summary> Introducing </summary>

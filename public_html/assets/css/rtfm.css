@@ -6,16 +6,17 @@ input label
 */
 h4 button {
  font-size: X-small;
+ padding: 0.12rem;
 } 
 .grid {
   display: grid;
   grid-template-columns: 8em auto ;
   width: 88%; 
-  margin: 0 auto;
 }
 #lft {
   background-color: var(--dvb);
   color: var(--dvf);
+  padding: 0.42rem 0 0;
 }
 #location {
   background-color: SNOW;
@@ -44,8 +45,7 @@ input {
 
 /* CHECKBOXES */ 
 input:checked + .faq-label {
- background-color: var(--XXXdvB);
- color: var(--XXXdvF);
+  /* */
 }
 input:checked ~ .faq-content {
  max-height: 100vh;

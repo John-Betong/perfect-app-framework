@@ -7,6 +7,13 @@
   </nav>
   <h1> <?= $title ?> </h1>
 </header>
+<?=  $alinkClrs ?> 
+
+
 <?php if(0) : ?>
-  <pre> <?= $cssVars ?> </pre>
+  <pre style="background-color: lime; color:#000;"> 
+    <?= $_SESSION['clr'] ?>
+    <?= print_r($_GET) ?>
+    <?= $cssVars ?> 
+  </pre>
 <?php endif;

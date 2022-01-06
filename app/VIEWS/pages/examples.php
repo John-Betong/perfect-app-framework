@@ -9,14 +9,14 @@ require VIEWS .'/incs/doctype.php';
 <?php require VIEWS .'/incs/header.php'; ?>
 
 <main class="grid">
-  <section id="lft"> 
+  <div id="lft"> 
     <?php require VIEWS .'/incs/side-examples.php'; ?>
-  </section>
+  </div>
 
-  <section id="location"> 
+  <div id="location"> 
     No left selection yet :) 
     <?php require 'assets/docs/blurb.php'; ?>
-  </section>
+  </div>
 </main>
  
 <?php require VIEWS .'/incs/footer-side.php'; ?> 

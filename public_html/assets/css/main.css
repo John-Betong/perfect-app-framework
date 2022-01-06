@@ -1,28 +1,3 @@
-/*
-https://tsh.io/blog/why-should-you-use-hsl-color-representation-in-css/
-
-hsla(hue, saturation, lightness, alpha)
-
-https://www.w3schools.com/html/html_colors_hsl.asp
-
-hsla(hue, saturation, lightness, alpha)
-  hue
-     a degree on the color circle (from 0 to 360) - 
-     0   is red, // (or 360) 
-     120 is green, 
-     240 is blue
-  saturation
-    0% is a shade of gray and 100% is the full color (full saturation)
-  lightness
-    0%   is black 
-    50%  is normal 
-    100% is white
-  alpha
-    opacity as a number between 0.0 (fully transparent) and 1.0 (fully opaque)
-    # The alpha parameter is a number between 0.0 (fully transparent) 
-    # and 1.0 (not transparent at all):
-*/
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -32,21 +7,15 @@ body {
   font: 16px/1.55 
   BlinkMacSystemFont, "Segoe UI", Roboto, 
   Helvetica, Arial, sans-serif;
- width: 100%; max-width: 130rem;
- margin: 0 auto ;
- background-color: var(--bdb); 
- color: var(--bdf);
- /*
-  --bg: pink;
-  background-color: var(--bg); 
-  color: SKYBLUE;
-  color: color-contrast(var(--bg) vs red, white, blue, pink, orange, white, black);
- */
+  width: 100%; max-width: 130rem;
+  margin: 0 auto ;
+  background-color: var(--bdb); 
+  color: var(--bdf);
 }
 
 main {
   width: 88%; margin: 2rem auto; 
-  border: solid 1px var(--bdf);
+  background-color: var(--ttf);
 }
 
 header {
@@ -59,33 +28,37 @@ header {
   */  
   background-image: url(https://zzz.anetizer.com/assets/imgs/jb_in_shorts.gif);  
   background-repeat: no-repeat;
-  background-size: 2.6rem;
+  background-size: 1.8rem;
   text-align: center;
   background-color: var(--ttb);
   color: var(--ttf);
-  margin: 0 auto 2rem;
+  margin: 0 auto;
 }
 header h1 {
-  margin: 0; padding: 0;
+  margin: 0 auto; padding: 0;
   height: 1.21em;
 }
-header nav {
+nav {
   text-align: center;
   line-height: 1;
-  margin: 0 0 0.42rem;
-  font-size: large;
+  margin: 0 0 0;
+  font-size: 1rem;
+  vertical-align: middle;
 }
-header nav #colours {
+nav #colours {
   font-size:  x-small;
+  background-color: var(--dvb);
 }
-header nav ul li {
+.inline li {
   display: inline-block;
-  margin: 0 0.42em 0.33rem;
 }
-header nav ul li:hover {
+ul li {
+  margin: 0 0.42em 0.000033rem;
+}
+nav ul li:hover {
   background-color: var(--dvb); color: var(--dvf); 
 }
-header nav ul li a {
+nav ul li a {
   text-decoration: none;
   color: var(--ttf);
 }
@@ -105,10 +78,11 @@ footer {
   font-size: smaller;
   text-align: center;
   writing-mode: vertical-rl;
-  background-color: var(ZZZ, SNOW); 
+  background-color: var(--ttb); 
+  color: var(--ttf);
   font-weight: 700;
   padding: 1em 0;
 }
 #FOOTER-SIDE a {
-  color: var(--bdf);
+  color: var(--ttf);
 }

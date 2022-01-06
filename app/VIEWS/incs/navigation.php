@@ -5,18 +5,12 @@ $INFO = 'https://www.makeuseof.com/how-to-make-accordion-html-css/';
 $clrs  = 'https://this-is-a-test-to-see-if-it-works.anetizer.com/sp-a/jb-swatch/';
 
 $aLinks = [
-# 'index-001.php'  => 'Plain',
-# 'index-002.php'  => 'CheckBox',
-#  'index-003.php' => 'Radio',
-#  'index-005.php' => 'all',
-#  'index-006.php' => 'single',
-# 'index-paul.php'=> 'Paul',
   'index.php'      => 'Home',
   'rtfm.php'       => 'RTFM',
   'examples.php'   => 'Examples',
   "$clrs"          => 'Colours',
 ];
-$links = '<ul id="pages">';
+$links = '<ul id="pages" class="inline">';
   foreach($aLinks as $key => $page) :
     $links .= "
       <li> 
@@ -27,20 +21,20 @@ $links = '<ul id="pages">';
 $links .= '</ul>';
  
 $aClrs = [
-  '?clr=blue'   => 'Blue',
   '?clr=orange' => 'Orange',
+  '?clr=blue'   => 'Blue',
   '?clr=green'  => 'Green',
   '?clr=slate'  => 'Slate',
-//'?clr=red'    => 'Red',
-//'?clr=none'   => 'None',
+  '?clr=gold'   => 'Gold',
+  '?clr=silver' => 'Silver',
 ];
-$links .= '<ul id="colours">';
+$alinkClrs = '<nav class="inline"> <ul id="colours">';
   foreach($aClrs as $key => $clr) :
-    $links .= "
+    $alinkClrs .= "
       <li title='Built On Giants Shoulders'> 
         <a href='$key'> $clr </a>
       </li>  
     ";
   endforeach;  
-$links .= '</ul>';
+$alinkClrs .= '</ul></nav>';
 

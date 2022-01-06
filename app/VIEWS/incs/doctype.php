@@ -1,78 +1,88 @@
 <?php declare(strict_types=1);
 
 session_start();
-$_SESSION['clr'] = $_SESSION['clr'] ?? 'slate';
+# SET COLOURS
+  $aClrs = ['blue', 'orange' ,'red','green', 'slate', 'gold', 'silver'];
 
-$clr = $_GET['clr'] ?? $_SESSION['clr'];
- 
-/*
-hsla(hue, saturation, lightness, alpha)
-  hue
-     a degree on the color circle (from 0 to 360) - 
-     0   is red, // (or 360) 
-     120 is green, 
-     240 is blue
-
-  saturation
-    0% is a shade of gray and 100% is the full color (full saturation)
-
-  lightness
-    0%   is black 
-    50%  is normal 
-    100% is white
-
-  alpha
-    opacity as a number between 0.0 (fully transparent) and 1.0 (fully opaque)
-    # The alpha parameter is a number between 0.0 (fully transparent) 
-    # and 1.0 (not transparent at all):
-*/
-
+  # SET DEFAULT COLOUR
+  $_SESSION['clr'] = $_SESSION['clr'] ?? 'blue';  
+  if( isset($_GET['clr']) && in_array($_GET['clr'], $aClrs)) :
+    $_SESSION['clr'] = $_GET['clr'];
+  endif;
+  $clr = $_SESSION['clr'];
+  
 switch($clr) :
 case 'orange' :  
   $cssVars = <<< ____EOT
-    --ttb: hsl(0 99% 53%); 
-    --ttf: hsl(0  0% 99% );
-____EOT;
-break;
-
-case 'green' :  
-  $cssVars = <<< ____EOT
-    --ttb: hsl(120 88% 53%); 
-    --ttf: hsl(0  0% 9% );
+    --ttb: #FBBC05;  /* ORANGE; */ 
+    --ttf: SNOW;     
+    --bdb: #4285F4;  /* BLUE; */    
+    --bdf: BLACK;     
+    --dvb: #34A853;  /* GREEN  */
+    --dvf: DARKGRAY; /* hsl(0 50% 50%); */
 ____EOT;
 break;
 
 case 'blue' :  
   $cssVars = <<< ____EOT
-    --ttb: hsl(240 52% 50%); 
-    --ttf: hsl(0  0% 99% );
+    --ttb: BLUE;
+    --ttf: SNOW;
+    --bdb: #e8e8e8; /* LIGHTGRAY; */
+    --bdf: hsl(0  0% 00% );
+    --dvb: LIGHTGRAY; /* hsl(0 50% 98%); */
+    --dvf: DARKGRAY;  /* hsl(0 50% 50%); */
+____EOT;
+break;
+
+case 'green' :  
+  $cssVars = <<< ____EOT
+    --ttb: CHARTREUSE; /* hsl(120 88% 53%); */
+    --ttf: SNOW;
+    --bdb: #e8e8e8; /* LIGHTGRAY; */
+    --bdf : hsl(0  0% 00% );
+    --dvb : LIGHTGRAY; /* hsl(0 50% 98%); */
+    --dvf : DARKGRAY;  /* hsl(0 50% 50%); */
 ____EOT;
 break;
 
 case 'slate' :  
   $cssVars = <<< ____EOT
-    --ttb: hsl(0 0% 42%); 
+    --ttb: LIGHTGRAY; /* hsl(0 0% 42%); */
     --ttf: hsl(0 50% 99% ); 
+    --bdb: #e8e8e8; /* LIGHTGRAY; */
+    --bdf : hsl(0  0% 00% );
+    --dvb : LIGHTGRAY; /* hsl(0 50% 98%); */
+    --dvf : DARKGRAY;  /* hsl(0 50% 50%); */
 ____EOT;
 break;
 
-case 'none' :  
-default :
+case 'gold' :  
   $cssVars = <<< ____EOT
-    --ttb: hsl(0  90%  50%); 
+    --ttb: GOLD; /* hsl(0  90%  50%); */
     --ttf: hsl(0  50%  100% );
+    --bdb: #e8e8e8; /* LIGHTGRAY; */
+    --bdf : hsl(0  0% 00% );
+    --dvb : LIGHTGRAY; /* hsl(0 50% 98%); */
+    --dvf : DARKGRAY;  /* hsl(0 50% 50%); */
 ____EOT;
 break;
+
+case 'silver' :  
+  $cssVars = <<< ____EOT
+    --ttb: SILVER; /* hsl(0  90%  50%); */
+    --ttf: hsl(0  50%  100% );
+    --bdb: #e8e8e8; /* LIGHTGRAY; */
+    --bdf : hsl(0  0% 00% );
+    --dvb : LIGHTGRAY; /* hsl(0 50% 98%); */
+    --dvf : DARKGRAY;  /* hsl(0 50% 50%); */
+____EOT;
+break;
+
 endswitch;
 
-$cssVars .= "
-  --bdb : hsl(0  0% 00% );
-  --bdf : hsl(0  0% 00% );
+$css = $css ?? 'home.css';
 
-  --dvb : LIGHTGRAY; /* hsl(0 50% 98%); */
-  --dvf : DARKGRAY;  /* hsl(0 50% 50%); */
-";
-$css = $css ?? 'style.css';
+$RELOAD = 'reload=' .date('H-i-s');
 
 echo $doctype = <<< ____EOT
 <!doctype html><html lang="en-GB">
@@ -84,8 +94,8 @@ echo $doctype = <<< ____EOT
 $cssVars
 }
 </style>
-<link rel="stylesheet" href="assets/css/main.css">
-<link rel="stylesheet" href="assets/css/$css">
+<link rel="stylesheet" href="assets/css/main.css?$RELOAD">
+<link rel="stylesheet" href="assets/css/$css?$RELOAD">
 <title> $title </title>  
 </head>
 ____EOT;

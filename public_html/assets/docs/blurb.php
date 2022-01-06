@@ -1,10 +1,11 @@
 <?php declare(strict_types=1);
 
-
 ?>
 <details open>
-  <summary> Introducing </summary>
-  <div class="description">
+  <summary> 
+    Introducing 
+  </summary>
+  <div>
     <h2> The Perfect App Framework </h2>  
     Brought to you by 
     <br>

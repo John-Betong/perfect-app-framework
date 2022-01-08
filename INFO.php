@@ -1,5 +1,9 @@
 <?php declare(strict_types=1);
 
+$tmp = 'git remote set-url origin git@github.com:<Username>/<Project>.git';
+
+$tmp = 'git remote set-url origin git@github.com:john-betong/perfect-app-framework.git';
+
 $title  = 'benanamen Branch no on my Repositiory';
 $online = 'https://Jeremy.anetizer.com';
 

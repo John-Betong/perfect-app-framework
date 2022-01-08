@@ -3,7 +3,7 @@ git remote set-url origin https://<githubtoken>@github.com/<username>/<repositor
 
 $tmp = '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';
 
-git remote set-url origin https://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@github.com/John-Betong/perfect-app-framework.git  
+git remote set-url origin https://ghp <REMOVE> _HiyLPRlYv14Cp5Gu6sLPJ3nkbBY7pu3MgWCs@github.com/John-Betong/perfect-app-framework.git  
 
 https://www.codegrepper.com/code-examples/shell/git+push+with+github+token+
 

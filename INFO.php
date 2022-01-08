@@ -103,17 +103,20 @@ dl dd {
       git commit -m "DETAILS"
       <br>
       git status
-      <br>
+      <br><br>
       BAD !!! 
       ### git push https://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@github.com/john-betong/perfect-app-framework
       ### 
-      <br>
+      <br><br>
       git push https://github.com/john-betong/perfect-app-framework 505cf9b..268c5a5  Perfect-App-framework -> jb-branch
+      <br><br>
 
       git push https://ghp_qdI50SvC7HSSK8dglktZpbWg7E21fG3BYeK.com/john-betong/perfect-app-framework -> jb-branch
       ghp_qdI50SvC7HSSK8dglktZpbWg7E21fG3BYeK
-      git push perfect-app-framework -> jb-branch
+      <br><br>
 
+      git push perfect-app-framework -> jb-branch
+      <br><br>
     </dd>
       
     <dt> RSYNC </dt>
